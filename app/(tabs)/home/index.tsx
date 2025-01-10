@@ -1,5 +1,10 @@
-import { StyleSheet, Button,TouchableOpacity, Image, Text, View, SafeAreaView, Alert } from "react-native";
+import { StyleSheet,TouchableOpacity, Image, Text, View, SafeAreaView, Alert } from "react-native";
 import {Link} from 'expo-router';
+import Button from '@mui/material/Button';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 
 
@@ -22,9 +27,6 @@ export default function Home() {
       <Link style={styles.button} href="/home/user_profile" asChild>
         <Text>Go to user profile</Text>
       </Link>
-      <Button 
-        onPress={() => {console.log('You tapped the button!');}}
-        title="Press Me"/>
     </SafeAreaView>   
   );
 }
