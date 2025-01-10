@@ -1,15 +1,12 @@
 import { StyleSheet,TouchableOpacity, Image, Text, View, SafeAreaView, Alert } from "react-native";
 import {Link} from 'expo-router';
-import Button from '@mui/material/Button';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import { PaperProvider, Button } from 'react-native-paper';
 
 
 
 export default function Home() {
   return (
+    <PaperProvider>
     <SafeAreaView
       style={styles.screen}
     >
@@ -24,10 +21,14 @@ export default function Home() {
       >
         <Image source={require("../../../assets/images/react-logo.png")} />
       </TouchableOpacity>
+      <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
+      Press me
+      </Button>
       <Link style={styles.button} href="/home/user_profile" asChild>
         <Text>Go to user profile</Text>
       </Link>
     </SafeAreaView>   
+    </PaperProvider>
   );
 }
 
