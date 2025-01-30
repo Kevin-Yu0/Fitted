@@ -10,7 +10,7 @@ export default function Home() {
     <SafeAreaView
       style={styles.screen}
     >
-      <Text>Fitted.</Text>
+      <Text>Stay Fitted.</Text>
       <TouchableOpacity
         onPress={() => {
           Alert.alert("Alert", "You tapped the image!",[
@@ -19,7 +19,8 @@ export default function Home() {
           ]);
         }}
       >
-        <Image source={require("../../../assets/images/react-logo.png")} />
+        <Image source={require("../../../assets/images/fitted-logo2.png")} 
+        style={{ width: 100, height: 100 }}/>
       </TouchableOpacity>
       <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
       Press me
@@ -35,13 +36,13 @@ export default function Home() {
 const styles = StyleSheet.create({
   // Add styles here
   screen: {
-    backgroundColor: "blue",
+    backgroundColor: "tan",
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
   },
   button:{
-    backgroundColor: "red",
+    backgroundColor: "skyblue",
     padding: 20,
     borderRadius: 5,
   }
